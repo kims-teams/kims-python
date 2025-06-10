@@ -30,8 +30,9 @@ def upload_file():
             df = pd.read_excel(file)
             # 엑셀 파일인 경우
         # JSON 형태로 변환
-        result = df.to_dict(orient='records')
-        return jsonify({'data': result})
+        columns = df.columns.tolist()
+        records = df.to_dict(orient='records')
+        return jsonify({'columns': columns, 'data': records})
 
     except Exception as e:
         # 예외 처리
