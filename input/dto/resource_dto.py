@@ -1,9 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
 
 class ResourceDTO(BaseModel):
     id: int
-    inputDataId: Optional[int]  
+    inputDataId: Optional[int] = Field(alias="input_data_id")
 
     class Config:
-        orm_mode = True
+        populate_by_name = True
+        from_attributes = True

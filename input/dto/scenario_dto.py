@@ -1,7 +1,8 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class ScenarioDTO(BaseModel):
     id: str
 
     class Config:
-        orm_mode = True
+        populate_by_name = True
+        from_attributes = True

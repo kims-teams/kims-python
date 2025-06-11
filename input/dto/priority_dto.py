@@ -1,13 +1,14 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
 
 class PriorityDTO(BaseModel):
     id: Optional[int]
-    factorId: Optional[str]
+    factorId: Optional[str] = Field(alias="factor_id")
     field: Optional[str]
-    orderType: Optional[str]
+    orderType: Optional[str] = Field(alias="order_type")
     description: Optional[str]
-    configId: Optional[int]  
+    configId: Optional[int] = Field(alias="config_id")
 
     class Config:
-        orm_mode = True
+        populate_by_name = True
+        from_attributes = True
