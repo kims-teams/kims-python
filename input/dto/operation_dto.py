@@ -1,19 +1,20 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
 
 class OperationDTO(BaseModel):
     id: Optional[int]
-    runTime: Optional[int]
-    runTimeUom: Optional[str]
-    waitTimeUom: Optional[str]
-    transferTimeUom: Optional[str]
-    sourcingType: Optional[str]
-    operationId: Optional[str]
-    operationName: Optional[str]
-    operationType: Optional[str]
-    operationSeq: Optional[int]
-    siteId2: Optional[str]
-    bopId: Optional[int]
+    runTime: Optional[int] = Field(alias="run_time")
+    runTimeUom: Optional[str] = Field(alias="run_time_uom")
+    waitTimeUom: Optional[str] = Field(alias="wait_time_uom")
+    transferTimeUom: Optional[str] = Field(alias="transfer_time_uom")
+    sourcingType: Optional[str] = Field(alias="sourcing_type")
+    operationId: Optional[str] = Field(alias="operation_id")
+    operationName: Optional[str] = Field(alias="operation_name")
+    operationType: Optional[str] = Field(alias="operation_type")
+    operationSeq: Optional[int] = Field(alias="operation_seq")
+    siteId2: Optional[str] = Field(alias="site_id2")
+    bopId: Optional[int] = Field(alias="bop_id")
 
     class Config:
-        orm_mode = True
+        populate_by_name = True
+        from_attributes = True
