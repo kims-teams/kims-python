@@ -2,14 +2,14 @@ from pydantic import BaseModel, Field
 from typing import Optional
 
 class MaterialMasterDTO(BaseModel):
-    id: Optional[int]
-    partType: Optional[str] = Field(alias="part_type")
-    partName: Optional[str] = Field(alias="part_name")
-    uom: Optional[str]
-    routingId: Optional[str] = Field(alias="routing_id")
-    siteId2: Optional[str] = Field(alias="site_id2")
-    partId: Optional[str] = Field(alias="part_id")
-    bopId: Optional[int] = Field(alias="bop_id")
+    id: Optional[int] = Field(default=None)
+    partType: Optional[str] = Field(default=None, alias="part_type")
+    partName: Optional[str] = Field(default=None, alias="part_name")
+    uom: Optional[str] = Field(default=None)
+    routingId: Optional[str] = Field(default=None, alias="routing_id")
+    siteId2: Optional[str] = Field(default=None, alias="site_id2")
+    partId: Optional[str] = Field(default=None, alias="part_id")
+    bopId: Optional[int] = Field(default=None, alias="bop_id")
 
     class Config:
         populate_by_name = True
