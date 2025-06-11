@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="feat : 파일 업로드 api, (엑셀만허용, 한글깨짐방지 까지 추가)">
+    <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="feat : 파일 업로드 api (컬럼, 데이터 따로 추출)">
+      <change afterPath="$PROJECT_DIR$/input/dto/bom_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/bop_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/config_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/input_data_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/manufacturing_process_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/material_master_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/operation_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/operation_sequence_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/plant_master_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/priority_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/resource_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/sales_order_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/scenario_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/target_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/tool_map_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/tool_master_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/workcenter_map_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/dto/workcenter_master_dto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,20 +38,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Boaz11Jachin"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Boaz11Jachin&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kims-teams/kims-python.git",
-    "accountId": "bf78dd14-1cbd-4afe-bece-7fa056e1a617"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kims-teams/kims-python.git&quot;,
+    &quot;accountId&quot;: &quot;bf78dd14-1cbd-4afe-bece-7fa056e1a617&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -52,7 +75,7 @@
     "Python.upload_server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "BJ/Dto",
     "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
@@ -87,7 +110,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="BJ/Dto" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
