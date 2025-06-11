@@ -2,8 +2,8 @@ from pydantic import BaseModel, Field
 from typing import Optional
 
 class InputDataDTO(BaseModel):
-    id: int
-    scenarioId: Optional[int] = Field(alias="scenario_id")
+    id: Optional[int] = Field(default=None)
+    scenarioId: Optional[int] = Field(default=None, alias="scenario_id")
 
     class Config:
         populate_by_name = True

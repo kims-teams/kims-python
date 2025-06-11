@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="feat : dto로 정제하는 코드 수정중">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/service/data_cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/service/data_cleaner.py" afterDir="false" />
+    <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="feat : dto optional되게 재수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/dto/bom_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/bom_dto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/dto/bop_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/bop_dto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/dto/config_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/config_dto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/dto/input_data_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/input_data_dto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/dto/manufacturing_process_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/manufacturing_process_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/material_master_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/material_master_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/operation_sequence_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/operation_sequence_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/plant_master_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/plant_master_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/priority_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/priority_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/resource_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/resource_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/sales_order_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/sales_order_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/scenario_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/scenario_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/target_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/target_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/dto/tool_map_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/tool_map_dto.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,19 +64,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_cleaner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.upload.executor&quot;: &quot;Run&quot;,
-    &quot;Python.upload_server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;chan1&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.app.executor": "Run",
+    "Python.data_cleaner.executor": "Run",
+    "Python.upload.executor": "Run",
+    "Python.upload_server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "BJ/dtos",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kims-python" />
@@ -147,7 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749622590917</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat : dto optional되게 재수정">
+      <option name="closed" value="true" />
+      <created>1749625554628</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749625554628</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat : dto optional되게 재수정">
+      <option name="closed" value="true" />
+      <created>1749625642719</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749625642719</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +200,7 @@
     <MESSAGE value="feat : dto 생성" />
     <MESSAGE value="feat : dto로 정제하는 코드" />
     <MESSAGE value="feat : dto로 정제하는 코드 수정중" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : dto로 정제하는 코드 수정중" />
+    <MESSAGE value="feat : dto optional되게 재수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : dto optional되게 재수정" />
   </component>
 </project>
