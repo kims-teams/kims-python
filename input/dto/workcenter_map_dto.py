@@ -19,7 +19,7 @@ class WorkcenterMapDTO(BaseModel):
     procTimeUom: Optional[TimeUom] = Field(default=None, alias="proc_time_uom")
     routingId: Optional[str] = Field(default=None, alias="routing_id")
     workcenterId: Optional[str] = Field(default=None, alias="workcenter_id")
-    siteId: Optional[str] = Field(default=None, alias="site_id")
+    siteId: Optional[int] = Field(default=None, alias="site_id")
     resourceId: Optional[int] = Field(default=None, alias="resource_id")
 
     class Config:

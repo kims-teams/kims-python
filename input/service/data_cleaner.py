@@ -4,6 +4,14 @@ import pkgutil
 import inspect
 from pathlib import Path
 from pydantic import BaseModel
+import pandas as pd
+
+
+
+def to_camel_case(snake_str):
+    components = snake_str.split('_')
+    return components[0] + ''.join(x.title() for x in components[1:])
+
 
 
 # 1. DTO 자동 로딩
@@ -47,3 +55,41 @@ def process_input_data(input_data: dict) -> dict:
 def get_json_result(input_data: dict) -> str:
     result = process_input_data(input_data)
     return json.dumps(result, ensure_ascii=False, indent=2)
+
+
+
+# ✅ 업로드된 df 정제 처리
+def clean_uploaded_dataframe(entity: str, df: pd.DataFrame) -> dict:
+    try:
+        dto_key = entity.lower()
+        dto_class = DTO_MAP.get(dto_key)
+        if not dto_class:
+            return {'error': f'지원하지 않는 entity(DTO): {entity}'}
+
+        # 결측치 처리
+        df = df.where(pd.notnull(df), None)
+
+        cleaned_data = []
+        cleaned_columns = set()
+
+        for row in df.to_dict(orient='records'):
+
+            row = {k: (None if pd.isna(v) else v) for k, v in row.items()}
+
+            try:
+                dto_instance = dto_class(**row)
+                filtered = dto_instance.dict(exclude_none=True)
+                camel_dict = {to_camel_case(k): v for k, v in filtered.items()}
+                cleaned_data.append(camel_dict)
+                cleaned_columns.update(camel_dict.keys())
+            except Exception as e:
+                return {'error': f'DTO 변환 실패: {str(e)}'}
+
+        return {
+            'entity': entity,
+            'columns': sorted(cleaned_columns),
+            'data': cleaned_data
+        }
+
+    except Exception as e:
+        return {'error': str(e)}
