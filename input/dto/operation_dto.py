@@ -10,7 +10,7 @@ class OperationDTO(BaseModel):
     operationSeq: Optional[int] = Field(default=None, alias="operation_seq")
     operationType: Optional[str] = Field(default=None, alias="operation_type")
     sourcingType: Optional[str] = Field(default=None, alias="sourcing_type")
-    scenarioId: Optional[str] = Field(default=None, alias="scenario_id")
+    scenarioId: Optional[int] = Field(default=None, alias="scenario_id")
     bopId: Optional[int] = Field(default=None, alias="bop_id")
 
     class Config:

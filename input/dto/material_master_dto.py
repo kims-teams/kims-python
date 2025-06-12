@@ -7,7 +7,7 @@ class MaterialMasterDTO(BaseModel):
     partType: Optional[str] = Field(default=None, alias="part_type")
     routingId: Optional[str] = Field(default=None, alias="routing_id")
     partName: Optional[str] = Field(default=None, alias="part_name")
-    scenarioId: Optional[str] = Field(default=None, alias="scenario_id")
+    scenarioId: Optional[int] = Field(default=None, alias="scenario_id")
     bopId: Optional[int] = Field(default=None, alias="bop_id")
 
     class Config:

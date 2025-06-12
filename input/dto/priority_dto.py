@@ -3,10 +3,11 @@ from typing import Optional
 
 class PriorityDTO(BaseModel):
     id: Optional[int] = Field(default=None)
+    priorityId: Optional[str] = Field(default=None, alias="priority_id")
     factorId: Optional[str] = Field(default=None, alias="factor_id")
-    field: Optional[str] = Field(default=None)
-    orderType: Optional[str] = Field(default=None, alias="order_type")
+    sequence: Optional[int] = Field(default=None)
     description: Optional[str] = Field(default=None)
+    scenarioId: Optional[int] = Field(default=None, alias="scenario_id")
     configId: Optional[int] = Field(default=None, alias="config_id")
 
     class Config:
