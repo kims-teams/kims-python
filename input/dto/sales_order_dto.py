@@ -7,14 +7,10 @@ class SalesOrderDTO(BaseModel):
     demandId: Optional[str] = Field(default=None, alias="demand_id")
     partId: Optional[str] = Field(default=None, alias="part_id")
     partName: Optional[str] = Field(default=None, alias="part_name")
-    customerId: Optional[int] = Field(default=None, alias="customer_id")
     dueDate: Optional[date] = Field(default=None, alias="due_date")
-    demandQty: Optional[float] = Field(default=None, alias="demand_qty")
-    uom: Optional[str] = Field(default=None)
-    orderType: Optional[str] = Field(default=None, alias="order_type")
-    orderTypeName: Optional[str] = Field(default=None, alias="order_type_name")
+    demandQty: Optional[int] = Field(default=None, alias="demand_qty")  # ← int로 수정
     headerCreationDate: Optional[date] = Field(default=None, alias="header_creation_date")
-    siteId2: Optional[str] = Field(default=None, alias="site_id2")
+    scenarioId: Optional[int] = Field(default=None, alias="scenario_id")
     targetId: Optional[int] = Field(default=None, alias="target_id")
 
     class Config:

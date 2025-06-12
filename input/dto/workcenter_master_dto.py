@@ -6,12 +6,10 @@ class WorkcenterMasterDTO(BaseModel):
     workcenterId: Optional[str] = Field(default=None, alias="workcenter_id")
     workcenterName: Optional[str] = Field(default=None, alias="workcenter_name")
     workcenterGroup: Optional[str] = Field(default=None, alias="workcenter_group")
-    workcenterType: Optional[str] = Field(default=None, alias="workcenter_type")
-    dispatcherType: Optional[str] = Field(default=None, alias="dispatcher_type")
+    factorId: Optional[str] = Field(default=None, alias="factor_id")
     workcenterState: Optional[str] = Field(default=None, alias="workcenter_state")
     automation: Optional[str] = Field(default=None)
-    siteId: Optional[int] = Field(default=None, alias="site_id")
-    factorId: Optional[str] = Field(default=None, alias="factor_id")
+    scenarioId: Optional[int] = Field(default=None, alias="scenario_id")
     resourceId: Optional[int] = Field(default=None, alias="resource_id")
 
     class Config:

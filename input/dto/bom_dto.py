@@ -14,7 +14,7 @@ class BomDTO(BaseModel):
     toPartName: Optional[str] = Field(default=None, alias="to_part_name")
     fromPartName: Optional[str] = Field(default=None, alias="from_part_name")
     zseq: Optional[Decimal] = Field(default=None)
-    scenarioId: Optional[str] = Field(default=None, alias="scenario_id")
+    scenarioId: Optional[int] = Field(default=None, alias="scenario_id")
     fromPartLevel: Optional[Decimal] = Field(default=None, alias="from_part_level")
     toPartLevel: Optional[Decimal] = Field(default=None, alias="to_part_level")
     bopId: Optional[int] = Field(default=None, alias="bop_id")
