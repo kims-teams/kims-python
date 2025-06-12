@@ -10,7 +10,7 @@ class WorkcenterMasterDTO(BaseModel):
     dispatcherType: Optional[str] = Field(default=None, alias="dispatcher_type")
     workcenterState: Optional[str] = Field(default=None, alias="workcenter_state")
     automation: Optional[str] = Field(default=None)
-    siteId: Optional[str] = Field(default=None, alias="site_id")
+    siteId: Optional[int] = Field(default=None, alias="site_id")
     factorId: Optional[str] = Field(default=None, alias="factor_id")
     resourceId: Optional[int] = Field(default=None, alias="resource_id")
 

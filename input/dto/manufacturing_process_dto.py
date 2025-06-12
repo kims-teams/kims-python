@@ -6,7 +6,7 @@ class ManufacturingProcessDTO(BaseModel):
     routingId: Optional[str] = Field(default=None, alias="routing_id")
     routingType: Optional[str] = Field(default=None, alias="routing_type")
     routingName: Optional[str] = Field(default=None, alias="routing_name")
-    siteId: Optional[str] = Field(default=None, alias="site_id")
+    siteId: Optional[int] = Field(default=None, alias="site_id")
     bopId: Optional[int] = Field(default=None, alias="bop_id")
 
     class Config:

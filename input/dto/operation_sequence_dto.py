@@ -8,7 +8,7 @@ class OperationSequenceDTO(BaseModel):
     operationType: Optional[str] = Field(default=None, alias="operation_type")
     operationName: Optional[str] = Field(default=None, alias="operation_name")
     routingId: Optional[str] = Field(default=None, alias="routing_id")
-    siteId: Optional[str] = Field(default=None, alias="site_id")
+    siteId: Optional[int] = Field(default=None, alias="site_id")
     bopId: Optional[int] = Field(default=None, alias="bop_id")
 
     class Config:
