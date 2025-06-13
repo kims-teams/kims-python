@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="fix : dto 수정">
+    <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="fix : dto 전체 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/bom_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/bom_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/manufacturing_process_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/manufacturing_process_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/material_master_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/material_master_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/operation_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/operation_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/operation_sequence_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/operation_sequence_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/plant_master_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/plant_master_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/priority_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/priority_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/sales_order_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/sales_order_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/dto/tool_map_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/tool_map_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/tool_master_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/tool_master_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/workcenter_map_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/workcenter_map_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dto/workcenter_master_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/dto/workcenter_master_dto.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,19 +52,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.app.executor": "Run",
-    "Python.data_cleaner.executor": "Run",
-    "Python.upload.executor": "Run",
-    "Python.upload_server.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "BJ/dtoall",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_cleaner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.upload.executor&quot;: &quot;Run&quot;,
+    &quot;Python.upload_server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;BJ/dtoall&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kims-python" />
@@ -184,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749711278677</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix : dto 전체 수정">
+      <option name="closed" value="true" />
+      <created>1749718638531</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749718638531</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +216,7 @@
     <MESSAGE value="feat : dto optional되게 재수정" />
     <MESSAGE value="feat : 업로드한 엑셀 dto로 정제하는 코드" />
     <MESSAGE value="fix : dto 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : dto 수정" />
+    <MESSAGE value="fix : dto 전체 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : dto 전체 수정" />
   </component>
 </project>

@@ -4,7 +4,7 @@ from typing import Optional
 class ToolMapDTO(BaseModel):
     id: Optional[int] = Field(default=None)
     scenarioId: Optional[int] = Field(default=None, alias="scenario_id")
-    portId: Optional[str] = Field(default=None, alias="port_id")
+    partId: Optional[str] = Field(default=None, alias="part_id")
     toolId: Optional[str] = Field(default=None, alias="tool_id")
     partName: Optional[str] = Field(default=None, alias="part_name")
     resourceId: Optional[int] = Field(default=None, alias="resource_id")

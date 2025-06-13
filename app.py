@@ -16,7 +16,7 @@ def process_data():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-@app.route("/api/upload/<entity>", methods=['POST'])
+@app.route("/api/input-file/<entity>", methods=['POST'])
 def upload_file(entity):
     print(entity)
     if 'file' not in request.files:
