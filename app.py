@@ -1,8 +1,7 @@
 from flask import Flask, request, jsonify
-from input.service.data_cleaner import get_json_result
 from flask_cors import CORS
 import pandas as pd
-
+import input.service.data_cleaner as cleaner
 
 app = Flask(__name__)
 CORS(app)
@@ -11,7 +10,7 @@ CORS(app)
 def process_data():
     try:
         input_data = request.get_json()
-        result_json = get_json_result(input_data)
+        result_json = cleaner.get_json_result(input_data)
         return result_json, 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -41,9 +40,7 @@ def upload_file(entity):
             df = pd.read_excel(file)
             # 엑셀 파일인 경우
 
-        from input.service.data_cleaner import clean_uploaded_dataframe
-
-        result = clean_uploaded_dataframe(entity, df)
+        result = cleaner.clean_uploaded_dataframe(entity, df)
 
         return jsonify(result)
 
@@ -52,13 +49,5 @@ def upload_file(entity):
         return jsonify({'error': str(e)}), 500
 
 
-
-def to_camel_case(snake_str):
-    components = snake_str.split('_')
-    return components[0] + ''.join(x.title() for x in components[1:])
-
-
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-
-

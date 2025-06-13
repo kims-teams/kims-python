@@ -58,7 +58,7 @@ def get_json_result(input_data: dict) -> str:
 
 
 
-# ✅ 업로드된 df 정제 처리
+# 업로드된 df 정제 처리
 def clean_uploaded_dataframe(entity: str, df: pd.DataFrame) -> dict:
     try:
         dto_key = entity.lower()
