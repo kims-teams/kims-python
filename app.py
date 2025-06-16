@@ -6,14 +6,6 @@ import input.service.data_cleaner as cleaner
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/process", methods=["POST"])
-def process_data():
-    try:
-        input_data = request.get_json()
-        result_json = cleaner.get_json_result(input_data)
-        return result_json, 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
 
 @app.route("/api/input-file/<entity>", methods=['POST'])
 def upload_file(entity):
