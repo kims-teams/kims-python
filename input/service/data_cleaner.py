@@ -35,26 +35,6 @@ def load_all_dtos_from_package(package_name: str):
 # 2. 자동 DTO 매핑
 DTO_MAP = load_all_dtos_from_package("input.dto")
 
-# 3. 정제 로직
-def process_input_data(input_data: dict) -> dict:
-    try:
-        for key, value in input_data.items():
-            dto_class = DTO_MAP.get(key.lower())
-            if not dto_class:
-                return {"error": f"지원하지 않는 DTO 유형: {key}"}
-
-            dto_instance: BaseModel = dto_class(**value)
-            return dto_instance.dict(exclude_none=True)
-
-        return {"error": "데이터가 비어 있음"}
-
-    except Exception as e:
-        return {"error": str(e)}
-
-# 4. JSON 변환
-def get_json_result(input_data: dict) -> str:
-    result = process_input_data(input_data)
-    return json.dumps(result, ensure_ascii=False, indent=2)
 
 
 
