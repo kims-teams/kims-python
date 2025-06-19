@@ -1,3 +1,4 @@
+import traceback
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
@@ -38,6 +39,8 @@ def upload_file(entity):
 
     except Exception as e:
         # 예외 처리
+        print("💥 Flask 서버 예외 발생:")
+        traceback.print_exc()  # ← 전체 에러 스택 찍힘
         return jsonify({'error': str(e)}), 500
 
 
