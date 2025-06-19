@@ -1,0 +1,3 @@
+diff --git a/upload_server.py b/app.py
+rename from upload_server.py
+rename to app.py

@@ -46,14 +46,15 @@ def clean_uploaded_dataframe(entity: str, df: pd.DataFrame) -> dict:
         if not dto_class:
             return {'error': f'지원하지 않는 entity(DTO): {entity}'}
 
+        print(f"✅ 로딩된 DTO 클래스: {dto_class.__name__}")
+
         # 결측치 처리
         df = df.where(pd.notnull(df), None)
 
         cleaned_data = []
         cleaned_columns = set()
 
-        for row in df.to_dict(orient='records'):
-
+        for idx, row in enumerate(df.to_dict(orient='records')):
             row = {k: (None if pd.isna(v) else v) for k, v in row.items()}
 
             try:
@@ -63,6 +64,10 @@ def clean_uploaded_dataframe(entity: str, df: pd.DataFrame) -> dict:
                 cleaned_data.append(camel_dict)
                 cleaned_columns.update(camel_dict.keys())
             except Exception as e:
+                print("❌ DTO 변환 실패!")
+                print(f"👉 실패한 행 index: {idx}")
+                print(f"👉 데이터: {json.dumps(row, ensure_ascii=False)}")
+                print(f"👉 에러 내용: {str(e)}")
                 return {'error': f'DTO 변환 실패: {str(e)}'}
 
         return {
@@ -72,4 +77,6 @@ def clean_uploaded_dataframe(entity: str, df: pd.DataFrame) -> dict:
         }
 
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         return {'error': str(e)}
