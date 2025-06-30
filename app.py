@@ -3,6 +3,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
 import input.service.data_cleaner as cleaner
+from input.service.arima_service import arima_function
+from input.service.prophet_service import prophet_function
 
 app = Flask(__name__)
 CORS(app)
@@ -42,6 +44,17 @@ def upload_file(entity):
         print("💥 Flask 서버 예외 발생:")
         traceback.print_exc()  # ← 전체 에러 스택 찍힘
         return jsonify({'error': str(e)}), 500
+
+
+@app.route("/api/forecast/arima", methods=['POST'])
+def api_arima():
+    result = arima_function()
+    return jsonify(result.to_dict(orient="records"))
+
+@app.route("/api/forecast/prophet", methods=['POST'])
+def api_prophet():
+    result = prophet_function()
+    return jsonify(result.to_dict(orient="records"))
 
 
 if __name__ == "__main__":
