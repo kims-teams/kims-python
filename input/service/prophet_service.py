@@ -1,20 +1,23 @@
 import os
 import pandas as pd
 from prophet import Prophet
-import math
 import numpy as np
 
-def nan_to_none(x):
-    return None if isinstance(x, float) and math.isnan(x) else x
-
-
-def prophet_function(csv_path=None, steps=12):
-
-    if csv_path is None:
+def prophet_function(excel_path=None, steps=12):
+    if excel_path is None:
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        csv_path = os.path.join(BASE_DIR, "data", "monthly_sales_volume.csv")
+        file_path = os.path.join(BASE_DIR, "data", "monthly_sales_volume.xlsx")
 
-    data = pd.read_csv(csv_path, dtype={"시점": "str"})
+    ext = os.path.splitext(file_path)[-1].lower()
+    if ext in [".xls", ".xlsx"]:
+        data = pd.read_excel(file_path, dtype={"시점": "str"})
+    elif ext == ".csv":
+        data = pd.read_csv(file_path, dtype={"시점": "str"})
+    else:
+        raise ValueError("지원하지 않는 파일 형식입니다.")
+
+    data = pd.read_excel(excel_path, dtype={"시점": "str"})   # ← 수정!
+
     data.columns = ["ds", "y"]
     data["ds"] = pd.to_datetime(data["ds"], format="%Y.%m")
 
@@ -39,8 +42,7 @@ def prophet_function(csv_path=None, steps=12):
     })
 
     result = pd.concat([df_actual, df_pred], ignore_index=True)
-
     result = result.replace({np.nan: None})
     records = result.to_dict(orient="records")
     print(records)
-    return result
+    return records

@@ -48,14 +48,17 @@ def upload_file(entity):
 
 @app.route("/api/forecast/arima", methods=['POST'])
 def api_arima():
-    result = arima_function()
-    return jsonify(result.to_dict(orient="records"))
+    file = request.files['file']
+    data = pd.read_excel(file, dtype={"시점": "str"})
+    result = arima_function(data)
+    return jsonify(result)
 
 @app.route("/api/forecast/prophet", methods=['POST'])
 def api_prophet():
-    result = prophet_function()
-    result = result.where(pd.notnull(result), None)
-    return jsonify(result.to_dict(orient="records"))
+    file = request.files['file']
+    data = pd.read_excel(file, dtype={"시점": "str"})
+    result = prophet_function(data)
+    return jsonify(result)
 
 
 if __name__ == "__main__":
