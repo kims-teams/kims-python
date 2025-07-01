@@ -54,6 +54,7 @@ def api_arima():
 @app.route("/api/forecast/prophet", methods=['POST'])
 def api_prophet():
     result = prophet_function()
+    result = result.where(pd.notnull(result), None)
     return jsonify(result.to_dict(orient="records"))
 
 

@@ -1,6 +1,12 @@
 import os
 import pandas as pd
 from prophet import Prophet
+import math
+import numpy as np
+
+def nan_to_none(x):
+    return None if isinstance(x, float) and math.isnan(x) else x
+
 
 def prophet_function(csv_path=None, steps=12):
 
@@ -33,4 +39,8 @@ def prophet_function(csv_path=None, steps=12):
     })
 
     result = pd.concat([df_actual, df_pred], ignore_index=True)
+
+    result = result.replace({np.nan: None})
+    records = result.to_dict(orient="records")
+    print(records)
     return result
