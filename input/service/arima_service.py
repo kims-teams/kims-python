@@ -10,8 +10,9 @@ def arima_function(data, steps=12):
     model = ARIMA(ts, order=(1,2,1))
     fit = model.fit()
     forecast = fit.forecast(steps=steps)
+
     last_date = ts.index[-1]
-    forecast_index = pd.date_range(start=last_date + pd.DateOffset(months=1), periods=steps, freq='MS')
+    forecast_index = pd.date_range(start=last_date + pd.DateOffset(months=1), periods=steps, freq="MS")
     forecast = pd.Series(forecast.values, index=forecast_index)
 
     df_actual = pd.DataFrame({'date': ts.index.astype(str), 'value': ts.values, 'type': 'actual'})

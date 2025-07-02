@@ -42,7 +42,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/kims-teams/kims-python.git&quot;,
-    &quot;accountId&quot;: &quot;8ae1ab73-a5dc-4e07-aa3e-b496f93ae185&quot;
+    &quot;accountId&quot;: &quot;bf78dd14-1cbd-4afe-bece-7fa056e1a617&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -67,8 +67,10 @@
     &quot;Python.upload_server.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+
     &quot;git-widget-placeholder&quot;: &quot;soolyn&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+
   }
 }</component>
   <component name="RecentsManager">
@@ -86,11 +88,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\USER\IdeaProjects\final-project\kims-python" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\dev\kim's-teams\kims-python\app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
