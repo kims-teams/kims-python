@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="add : 수요예측 구현">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kims-python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kims-python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/25__6__17___10_02__________.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/service/arima_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/service/arima_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/service/prophet_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/service/prophet_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="soolyn" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,23 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.arima_service.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_cleaner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.prophet_service.executor&quot;: &quot;Run&quot;,
-    &quot;Python.upload.executor&quot;: &quot;Run&quot;,
-    &quot;Python.upload_server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-
-    &quot;git-widget-placeholder&quot;: &quot;soolyn&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
-
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.app.executor": "Run",
+    "Python.arima_service.executor": "Run",
+    "Python.data_cleaner.executor": "Run",
+    "Python.prophet_service.executor": "Run",
+    "Python.upload.executor": "Run",
+    "Python.upload_server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\soolyn\I_project\kims-python\input\data" />

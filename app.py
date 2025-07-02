@@ -51,7 +51,7 @@ def api_arima():
     file = request.files['file']
     data = pd.read_excel(file, dtype={"시점": "str"})
     result = arima_function(data)
-    return jsonify(result.to_dict(orient="records"))
+    return jsonify(result)
 
 
 @app.route("/api/forecast/prophet", methods=['POST'])
@@ -59,7 +59,7 @@ def api_prophet():
     file = request.files['file']
     data = pd.read_excel(file, dtype={"시점": "str"})
     result = prophet_function(data)
-    return jsonify(result.to_dict(orient="records"))
+    return jsonify(result)
 
 
 
