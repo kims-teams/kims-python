@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="fix : 수정">
+    <list default="true" id="de82d9ac-1036-4376-9f24-203aa72af71d" name="변경" comment="add : 수요예측 구현">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/kims-python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kims-python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/25__6__17___10_02__________.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/25__6__17__오전_10_02,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/service/arima_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/service/arima_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/service/prophet_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/input/service/prophet_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +67,10 @@
     &quot;Python.upload_server.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+
+    &quot;git-widget-placeholder&quot;: &quot;soolyn&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+
   }
 }</component>
   <component name="RecentsManager">
@@ -100,6 +103,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python.app" />
@@ -209,7 +213,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749781341213</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add : 수요예측 구현">
+      <option name="closed" value="true" />
+      <created>1751337594632</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751337594632</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add : 수요예측 구현">
+      <option name="closed" value="true" />
+      <created>1751340268940</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751340268940</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +243,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="BJ/delete" />
+                        <option value="soolyn" />
                       </list>
                     </value>
                   </entry>
@@ -246,7 +266,8 @@
     <MESSAGE value="fix : dto 전체 수정" />
     <MESSAGE value="fix : dto 수정, api 경로 수정" />
     <MESSAGE value="fix : priority_id 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : priority_id 수정" />
+    <MESSAGE value="add : 수요예측 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : 수요예측 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

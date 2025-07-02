@@ -1,7 +1,7 @@
 
 import pandas as pd
-
 from prophet import Prophet
+import numpy as np
 
 def prophet_function(data, steps=12):
     data.columns = ["ds", "y"]
@@ -28,7 +28,6 @@ def prophet_function(data, steps=12):
     })
 
     result = pd.concat([df_actual, df_pred], ignore_index=True)
-    result = result.replace({pd.NA: None, pd.NaT: None, float('nan'): None})
+    result = result.replace({np.nan: None, pd.NA: None, pd.NaT: None, float('nan'): None})
     result = result.where(pd.notnull(result), None)
-
-    return result
+    return result.to_dict(orient="records")

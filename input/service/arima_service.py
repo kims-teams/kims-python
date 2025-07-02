@@ -7,8 +7,7 @@ def arima_function(data, steps=12):
     data["date"] = pd.to_datetime(data["date"], format="%Y.%m")
     data = data.set_index("date")
     ts = data["sales_volume"].astype(float)
-
-    model = ARIMA(ts, order=(1, 1, 1))
+    model = ARIMA(ts, order=(1,2,1))
     fit = model.fit()
     forecast = fit.forecast(steps=steps)
 
@@ -22,5 +21,5 @@ def arima_function(data, steps=12):
     result = pd.concat([df_actual, df_pred], ignore_index=True)
     result = result.replace({pd.NA: None, pd.NaT: None, float('nan'): None})
     result = result.where(pd.notnull(result), None)
+    return result.to_dict(orient="records")
 
-    return result
